@@ -13,6 +13,11 @@
             key-positions = <28 29>;
             layers = <2>;
         };
+
+        lock {
+            bindings = <&kp LG(L)>;
+            key-positions = <53 54>;
+        };
     };
 
     keymap {
