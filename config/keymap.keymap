@@ -34,11 +34,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp N1     &kp N2        &kp N3        &kp N4       &kp N5                                     &kp N6       &kp N7    &kp N8     &kp N9    &kp N0                &none
-&kp TAB    &kp Q      &kp W         &kp E         &kp R        &kp T                                      &kp Y        &kp U     &kp I      &kp O     &kp P                 &tap_dance_mouse
-&kp RCTRL  &kp A      &kp S         &kp D         &lt 1 F      &kp G        &mkp LCLK    &mkp RCLK        &kp H        &kp J     &kp K      &kp L     &kp SEMI              &kp COLON
-&kp LSHFT  &kp Z      &kp X         &kp C         &kp V        &kp B        &kp ESCAPE   &kp B            &kp N        &kp M     &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &mt RSHFT UP
-&mkp LCLK  &mkp RCLK  &kp LEFT_ALT  &kp LEFT_GUI  &lt 6 SPACE  &lt 2 LANG1  &lt 3 LANG2  &lt 4 BACKSPACE  &lt 5 ENTER  &kp BSPC  &kp RALT   &kp LEFT  &kp DOWN              &kp RIGHT
+&kp ESC    &kp N1     &kp N2        &kp N3        &kp N4       &kp N5                                     &kp N6       &kp N7    &kp N8     &kp N9    &kp N0          &none
+&kp TAB    &kp Q      &kp W         &kp E         &kp R        &kp T                                      &kp Y        &kp U     &kp I      &kp O     &kp P           &tap_dance_mouse
+&kp RCTRL  &kp A      &kp S         &kp D         &lt 1 F      &kp G        &mkp LCLK    &mkp RCLK        &kp H        &kp J     &kp K      &kp L     &mt RCTRL SEMI  &mt RCTRL SINGLE_QUOTE
+&kp LSHFT  &kp Z      &kp X         &kp C         &kp V        &kp B        &kp ESCAPE   &kp B            &kp N        &kp M     &kp COMMA  &kp DOT   &mt RSHFT FSLH  &mt RSHFT UP
+&mkp LCLK  &mkp RCLK  &kp LEFT_ALT  &kp LEFT_GUI  &lt 6 SPACE  &lt 2 LANG2  &lt 3 LANG1  &lt 4 BACKSPACE  &lt 5 ENTER  &kp BSPC  &kp RALT   &kp LEFT  &kp DOWN        &kp RIGHT
             >;
         };
 
@@ -55,7 +55,7 @@
         layer_2 {
             bindings = <
 &trans  &trans            &trans            &trans      &trans      &trans                      &trans          &trans         &trans            &trans             &trans         &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)      &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &trans
+&trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)      &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &trans
 &trans  &kp N1            &kp N2            &kp N3      &kp N4      &kp N5      &trans  &trans  &kp LEFT_BRACE  &kp MINUS      &kp EQUAL         &kp RIGHT_BRACE    &kp COLON      &trans
 &trans  &kp N6            &kp N7            &kp N8      &kp N9      &kp N0      &trans  &trans  &kp LS(MINUS)   &kp LS(EQUAL)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
 &trans  &trans            &trans            &trans      &trans      &trans      &trans  &trans  &kp TAB         &kp DEL        &trans            &trans             &trans         &trans
@@ -96,8 +96,8 @@
             bindings = <
 &none  &none         &none        &none          &none         &none                        &none         &none        &none         &none         &none          &none
 &none  &kp N1        &kp N2       &kp N3         &kp N4        &kp N5                       &kp N6        &kp N7       &kp N8        &kp N9        &kp N0         &kp MINUS
-&none  &kp LS(EXCL)  &kp LS(DQT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &none  &none  &kp LS(AMPS)  &kp LS(SQT)  &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(LBRC)   &kp LS(RBRC)
-&none  &none         &none        &kp LS(TILDE)  &kp CARET     &none          &none  &none  &none         &none        &kp LBKT      &kp RBKT      &kp LS(UNDER)  &kp AT_SIGN
+&none  &kp LS(EXCL)  &kp LS(DQT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &none  &none  &kp LS(AMPS)  &kp SQT  &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(LBRC)   &kp LS(RBRC)
+&none  &kp EXCL      &none        &kp LS(TILDE)  &kp CARET     &none          &none  &none  &none         &kp BACKSLASH &kp LBKT      &kp RBKT      &kp LS(UNDER)  &kp AT_SIGN
 &none  &none         &none        &none          &none         &none          &none  &none  &none         &none        &none         &none         &none          &none
             >;
         };
