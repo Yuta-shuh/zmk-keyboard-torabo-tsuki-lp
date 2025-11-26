@@ -96,9 +96,9 @@
             bindings = <
 &none  &none         &none        &none          &none         &none                        &none         &none          &none         &none         &none          &none
 &none  &kp N1        &kp N2       &kp N3         &kp N4        &kp N5                       &kp N6        &kp N7         &kp N8        &kp N9        &kp N0         &kp MINUS
-&none  &kp LS(EXCL)  &kp LS(DQT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &none  &none  &kp LS(AMPS)  &kp SQT        &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(LBRC)   &kp LS(RBRC)
-&none  &kp EXCL      &none        &kp LS(TILDE)  &kp CARET     &none          &none  &none  &none         &kp BACKSLASH  &kp LBKT      &kp RBKT      &kp LS(UNDER)  &kp AT_SIGN
-&none  &none         &none        &none          &none         &none          &none  &none  &none         &none          &none         &none         &none          &none
+&kp LCTRL  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &none  &none  &kp LS(N6)  &kp LS(N7)        &kp LS(N8)  &kp LS(N9)  &kp LS(LBRC)   &kp LS(RBRC)
+&kp LSHFT  &kp EXCL      &none        &kp LS(TILDE)  &kp CARET     &none          &none  &none  &none         &kp BACKSLASH  &kp LBKT      &kp RBKT      &kp LS(UNDER)  &kp AT_SIGN
+&none  &none         &none        &none          &none         &none          &none  &none  &none         &none          &none         &none         &kp INT3          &kp INT1
             >;
         };
     };
