@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define JBSL          0x5c              // \
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -126,10 +128,10 @@
         Green {
             bindings = <
 &none      &none       &none       &none          &none       &none                     &none       &none       &none       &none          &none         &none
-&none      &kp N1      &kp N2      &kp N3         &kp N4      &kp N5                    &kp N6      &kp N7      &kp N8      &kp N9         &kp N0        &kp LBKT
+&kp GRAVE  &kp N1      &kp N2      &kp N3         &kp N4      &kp N5                    &kp N6      &kp N7      &kp N8      &kp N9         &kp N0        &kp LBKT
 &kp LCTRL  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)     &kp LS(N4)  &kp LS(N5)  &none  &none  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)     &kp LS(RBKT)  &kp LS(BACKSLASH)
 &kp LSHFT  &kp EXCL    &none       &kp LS(TILDE)  &kp EQUAL   &none       &none  &none  &none       &kp LBKT    &kp RBKT    &kp BACKSLASH  &kp INT1      &kp INT3
-&none      &none       &none       &none          &none       &none       &none  &none  &none       &none       &none       &none          &kp INT3      &kp LS(INT3)
+&none      &none       &none       &none          &none       &none       &none  &none  &none       &none       &none       &none          &kp JBSL      &kp LS(INT3)
             >;
         };
     };
