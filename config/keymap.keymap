@@ -18,6 +18,21 @@
             bindings = <&kp LG(L)>;
             key-positions = <53 54>;
         };
+
+        kpKayotin {
+            bindings = <&kp2>;
+            key-positions = <33 34>;
+        };
+
+        kpHakumai {
+            bindings = <&kp1>;
+            key-positions = <47 48>;
+        };
+
+        kpUnderScore {
+            bindings = <&kp INT1>;
+            key-positions = <38 51>;
+        };
     };
 
     behaviors {
@@ -29,16 +44,32 @@
         };
     };
 
+    macros {
+        kp1: kp1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp C &kp U &kp E &kp INT1 &kp H &kp A &kp K &kp U &kp M &kp A &kp I>;
+            label = "KP1";
+        };
+
+        kp2: kp2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(K) &kp A &kp Y &kp O &kp T &kp I &kp N>;
+            label = "KP2";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&kp ESC    &kp N1     &kp N2        &kp N3        &kp N4       &kp N5                                     &kp N6       &kp N7    &kp N8     &kp N9    &kp N0          &none
-&kp TAB    &kp Q      &kp W         &kp E         &kp R        &kp T                                      &kp Y        &kp U     &kp I      &kp O     &kp P           &tap_dance_mouse
-&kp RCTRL  &kp A      &kp S         &kp D         &lt 4 F      &kp G        &mkp LCLK    &mkp RCLK        &kp H        &kp J     &kp K      &kp L     &mt RCTRL SEMI  &mt RCTRL SINGLE_QUOTE
-&kp LSHFT  &kp Z      &kp X         &kp C         &kp V        &kp B        &kp ESCAPE   &kp B            &kp N        &kp M     &kp COMMA  &kp DOT   &mt RSHFT FSLH  &mt RSHFT UP
-&mkp LCLK  &mkp RCLK  &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LANG2  &lt 6 SPACE  &lt 3 LANG1  &lt 4 BACKSPACE  &lt 5 ENTER  &kp BSPC  &kp RALT   &kp LEFT  &kp DOWN        &kp RIGHT
+&kp ESC    &kp N1     &kp N2        &kp N3        &kp N4       &kp N5                                     &kp N6       &kp N7  &kp N8     &kp N9    &kp N0          &none
+&kp TAB    &kp Q      &kp W         &kp E         &kp R        &kp T                                      &kp Y        &kp U   &kp I      &kp O     &kp P           &tap_dance_mouse
+&kp RCTRL  &kp A      &kp S         &kp D         &lt 4 F      &kp G        &mkp LCLK    &mkp RCLK        &kp H        &kp J   &kp K      &kp L     &mt RCTRL SEMI  &mt RCTRL SINGLE_QUOTE
+&kp LSHFT  &kp Z      &kp X         &kp C         &kp V        &kp B        &kp ESCAPE   &kp B            &kp N        &kp M   &kp COMMA  &kp DOT   &mt RSHFT FSLH  &mt RSHFT UP
+&mkp LCLK  &mkp RCLK  &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LANG2  &lt 6 SPACE  &lt 3 LANG1  &lt 4 BACKSPACE  &lt 5 ENTER  &none   &none      &kp LEFT  &kp DOWN        &kp RIGHT
             >;
         };
 
@@ -64,11 +95,11 @@
 
         layer_3 {
             bindings = <
-&trans  &trans   &trans   &trans        &trans        &trans                      &trans            &trans     &trans         &trans     &trans      &trans
-&trans  &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                      &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
-&trans  &kp F6   &kp F7   &kp F8        &kp F9        &kp F10     &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
-&trans  &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
-&trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
+&trans        &trans        &trans        &trans        &trans        &trans                          &trans            &trans     &trans         &trans     &trans      &trans
+&trans        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
+&trans        &kp F6        &kp F7        &kp F8        &kp F9        &kp F10     &trans      &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
+&bt BT_SEL 4  &kp F11       &kp F12       &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &bt BT_CLR  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp DELETE    &kp TAB     &trans      &trans  &trans            &trans     &trans         &trans     &trans      &trans
             >;
         };
 
