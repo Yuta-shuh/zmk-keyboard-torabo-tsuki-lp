@@ -35,6 +35,11 @@
             bindings = <&kp INT1>;
             key-positions = <38 51>;
         };
+
+        to-mouse {
+            bindings = <&to 1>;
+            key-positions = <34 35>;
+        };
     };
 
     behaviors {
@@ -77,11 +82,11 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans   &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans                  &mkp MB4 &trans     &kp PG_UP  &trans     &kp LS(LG(T))  &to 0
-&trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &mo 4    &mkp LCLK  &mkp RCLK  &mkp MCLK  &kp LG(W)  &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &mkp MB5 &kp LS(LC(TAB))     &kp PG_DN  &kp LC(TAB)     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans   &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans                  &trans    &trans           &trans     &trans       &trans         &trans
+&trans  &trans  &trans     &trans     &trans     &trans                  &mkp MB4  &trans           &kp PG_UP  &trans       &kp LS(LG(T))  &to 0
+&trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &mo 4     &mkp LCLK        &mkp RCLK  &mkp MCLK    &kp LG(W)      &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &mkp MB5  &kp LS(LC(TAB))  &kp PG_DN  &kp LC(TAB)  &trans         &trans
+&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans    &trans           &trans     &trans       &trans         &trans
             >;
         };
 
@@ -107,11 +112,11 @@
 
         Yello {
             bindings = <
-&trans  &trans    &trans    &trans    &trans  &trans                  &trans  &trans        &trans  &trans  &trans        &trans
-&trans  &trans    &trans    &trans    &trans  &trans                  &trans  &kp N7        &kp N8  &kp N9  &kp RBKT      &kp BACKSLASH
-&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans  &trans  &trans  &trans  &trans  &kp N4        &kp N5  &kp N6  &kp RS(RBKT)  &kp RS(BACKSLASH)
-&trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &kp N0  &kp N1        &kp N2  &kp N3  &kp RS(N8)    &kp RS(N9)
-&trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans        &trans
+&trans  &trans    &trans    &trans    &trans  &trans                  &trans  &trans  &trans  &trans  &trans        &trans
+&trans  &trans    &trans    &trans    &trans  &trans                  &trans  &kp N7  &kp N8  &kp N9  &kp RBKT      &kp BACKSLASH
+&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp N5  &kp N6  &kp RS(RBKT)  &kp RS(BACKSLASH)
+&trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &kp N0  &kp N1  &kp N2  &kp N3  &kp RS(N8)    &kp RS(N9)
+&trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans
             >;
         };
 
