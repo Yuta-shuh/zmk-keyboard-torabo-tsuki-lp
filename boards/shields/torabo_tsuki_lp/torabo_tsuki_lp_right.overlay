@@ -9,8 +9,7 @@
 
     automouse {
         // マウスレイヤー以外でオートマウスを有効にする設定
-        layers = <0 2 3 4 5 6 7>; 
-        require-prior-idle-ms = <300>;
+        layers = <0 2 3 5 6 7>; 
 
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
