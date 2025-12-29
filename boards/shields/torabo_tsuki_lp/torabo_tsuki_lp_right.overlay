@@ -4,11 +4,14 @@
 
 &zip_temp_layer {
     require-prior-idle-ms = <300>;
+    // 引数の数を「移動先、タイムアウト、許可レイヤー1、許可レイヤー2」の計4つに設定
+    #input-processor-cells = <4>;
 };
 
 &trackball_listener {
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+        &zip_temp_layer 1 700 0 7
     >;
 
     scroller {
