@@ -2,25 +2,33 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-&zip_temp_layer {
-    require-prior-idle-ms = <300>;
-    // 引数の数を「移動先、タイムアウト、許可レイヤー1、許可レイヤー2」の計4つに設定
-    #input-processor-cells = <4>;
-};
+/ {
+    behaviors {
+        // 新しい名前で定義。ここなら引数4つを自由に設定できます。
+        my_zip_temp: my_zip_temp {
+            compatible = "zmk,input-processor-temp-layer";
+            #input-processor-cells = <4>; 
+            require-prior-idle-ms = <300>;
+        };
+    };
 
-&trackball_listener {
-    input-processors = <
-        &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-        &zip_temp_layer 1 700 0 7
-    >;
-
-    scroller {
-        layers = <4>;
+    &trackball_listener {
         input-processors = <
-            &zip_xy_to_scroll_mapper
-            &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
-            &zip_scroll_scaler 1 16
+            &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+            
+            // 定義した「my_zip_temp」を使います
+            // 引数：移動先(1)、解除(700ms)、許可L(0)、許可L(7)
+            &my_zip_temp 1 700 0 7
         >;
+
+        scroller {
+            layers = <4>;
+            input-processors = <
+                &zip_xy_to_scroll_mapper
+                &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
+                &zip_scroll_scaler 1 16
+            >;
+        };
     };
 };
 
