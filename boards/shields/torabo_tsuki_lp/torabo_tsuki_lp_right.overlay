@@ -2,33 +2,31 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-/ {
-    behaviors {
-        // 新しい名前で定義。ここなら引数4つを自由に設定できます。
-        my_zip_temp: my_zip_temp {
-            compatible = "zmk,input-processor-temp-layer";
-            #input-processor-cells = <4>; 
-            require-prior-idle-ms = <300>;
-        };
+&zip_temp_layer {
+    require-prior-idle-ms = <300>;
+};
+
+&trackball_listener {
+    input-processors = <
+        &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+    >;
+
+    scroller {
+        layers = <4>;
+        input-processors = <
+            &zip_xy_to_scroll_mapper
+            &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
+            &zip_scroll_scaler 1 16
+        >;
     };
 
-    &trackball_listener {
+    // 2. レイヤー0と7の時だけ、オートマウスを「追加」する
+    l0_7_active {
+        layers = <0 7>;
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-            
-            // 定義した「my_zip_temp」を使います
-            // 引数：移動先(1)、解除(700ms)、許可L(0)、許可L(7)
-            &my_zip_temp 1 700 0 7
+            &zip_temp_layer 1 700 
         >;
-
-        scroller {
-            layers = <4>;
-            input-processors = <
-                &zip_xy_to_scroll_mapper
-                &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT
-                &zip_scroll_scaler 1 16
-            >;
-        };
     };
 };
 
