@@ -37,7 +37,7 @@
         };
 
         to-mouse {
-            bindings = <&to 1>;
+            bindings = <&tog 1>;
             key-positions = <34 35>;
         };
     };
@@ -48,6 +48,24 @@
             label = "TAP_DANCE_MOUSE";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&to 1>;
+        };
+
+        up_uscore: up_uscore {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_USCORE";
+            #binding-cells = <0>;
+            bindings = <&kp UP>, <&kp USCORE>;
+            // 左シフト(MOD_LSFT)のみを対象に設定
+            mods = <(MOD_LSFT)>;
+        };
+
+        up_morph_shift: up_morph_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "UP_MORPH_SHIFT";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>; // 長押し判定の時間（お好みで調整）
+            bindings = <&kp>, <&up_uscore>; // ホールドで&kp、タップでup_uscore
         };
     };
 
@@ -75,7 +93,7 @@
 &kp ESC    &kp N1     &kp N2        &kp N3        &kp N4       &kp N5                                     &kp N6       &kp N7  &kp N8     &kp N9    &kp N0          &none
 &kp TAB    &kp Q      &kp W         &kp E         &kp R        &kp T                                      &kp Y        &kp U   &kp I      &kp O     &kp P           &tap_dance_mouse
 &kp LCTRL  &kp A      &kp S         &kp D         &lt 4 F      &kp G        &mkp LCLK    &mkp RCLK        &kp H        &kp J   &kp K      &kp L     &mt RCTRL SEMI  &mt RCTRL SINGLE_QUOTE
-&kp LSHFT  &kp Z      &kp X         &kp C         &kp V        &kp B        &kp ESCAPE   &kp B            &kp N        &kp M   &kp COMMA  &kp DOT   &mt RSHFT FSLH  &mt RSHFT UP
+&kp LSHFT  &kp Z      &kp X         &kp C         &kp V        &kp B        &kp ESCAPE   &kp B            &kp N        &kp M   &kp COMMA  &kp DOT   &mt RSHFT FSLH  &up_morph_shift RSHFT 0
 &mkp LCLK  &mkp RCLK  &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LANG2  &lt 6 SPACE  &lt 3 LANG1  &lt 4 BACKSPACE  &lt 5 ENTER  &none   &none      &kp LEFT  &kp DOWN        &kp RIGHT
             >;
         };
@@ -84,7 +102,7 @@
             bindings = <
 &trans  &trans  &trans     &trans     &trans     &trans                  &trans   &trans          &trans     &trans          &trans        &trans
 &trans  &trans  &trans     &trans     &trans     &trans                  &mkp MB4 &msc SCRL_LEFT  &kp PG_UP  &msc SCRL_RIGHT &kp LS(LG(T)) &to 0
-&trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &mo 4    &mkp LCLK       &mkp RCLK  &mkp MCLK       &kp LG(W)     &to 1
+&trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &mo 4    &mkp LCLK       &mkp RCLK  &mkp MCLK       &kp LG(W)     &tog 1
 &trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &mkp MB5 &kp LS(LC(TAB)) &kp PG_DN  &kp LC(TAB)     &trans        &trans
 &trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans   &trans          &trans     &trans          &trans        &trans
             >;
