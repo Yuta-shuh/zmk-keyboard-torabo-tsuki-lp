@@ -28,7 +28,7 @@
 
         to-mouse {
             bindings = <&tog 1>;
-            key-positions = <34 35>;
+            key-positions = <34 37>;
         };
 
         AltF4 {
@@ -213,21 +213,21 @@
 
         Yello {
             bindings = <
-&trans  &trans    &trans    &trans    &trans  &trans                  &trans  &trans  &trans  &trans  &trans        &trans
-&trans  &trans    &trans    &trans    &trans  &trans                  &trans  &kp N7  &kp N8  &kp N9  &kp RBKT      &kp BACKSLASH
-&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp N5  &kp N6  &kp RS(RBKT)  &kp RS(BACKSLASH)
-&trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &kp N0  &kp N1  &kp N2  &kp N3  &kp RS(N8)    &kp RS(N9)
-&trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans
+&trans  &trans    &trans    &trans    &trans  &trans                  &trans  &trans  &trans  &trans     &trans        &trans
+&trans  &trans    &trans    &trans    &trans  &trans                  &kp2    &kp N7  &kp N8  &kp N9     &kp RBKT      &kp BACKSLASH
+&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp N5  &kp N6     &kp RS(RBKT)  &kp RS(BACKSLASH)
+&trans  &trans    &trans    &trans    &trans  &trans  &trans  &tog 4  &kp N0  &kp N1  &kp N2  &kp N3     &kp RS(N8)    &kp RS(N9)
+&trans  &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp KP_DOT &trans        &trans
             >;
         };
 
         Blue {
             bindings = <
-&trans          &trans          &trans  &trans  &trans   &trans                                    &trans    &trans    &trans     &trans           &trans  &trans
-&trans          &kp F1          &kp F2  &kp F3  &kp F4   &kp F5                                    &kp HOME  &kp HOME  &kp PG_UP  &trans           &trans  &trans
-&kp LCTRL       &kp F6          &kp F7  &kp F8  &kp F9   &kp F10       &trans       &trans         &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT        &trans  &kp RCTRL
-&kp LSHFT       &trans          &trans  &trans  &kp F11  &kp F12       &kp SPACE    &kp ENTER      &kp END   &kp END   &kp PG_DN  &trans           &trans  &kp RSHIFT
-&kp LANGUAGE_1  &kp LANGUAGE_2  &trans  &trans  &trans   &kp LS(HOME)  &kp LS(END)  &kp BACKSPACE  &trans    &trans    &trans     &kp LS(LC(DEL))  &trans  &kp DEL
+&trans          &trans          &trans  &trans  &trans   &trans                                    &trans    &trans    &trans     &trans           &trans     &trans
+&trans          &kp F1          &kp F2  &kp F3  &kp F4   &kp F5                                    &kp HOME  &kp HOME  &kp PG_UP  &trans           &trans     &tog 1
+&kp LCTRL       &kp F6          &kp F7  &kp F8  &kp F9   &kp F10       &trans       &trans         &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT        &kp MINUS  &kp RCTRL
+&kp LSHFT       &trans          &trans  &trans  &kp F11  &kp F12       &kp SPACE    &kp ENTER      &kp END   &kp END   &kp PG_DN  &trans           &trans     &kp RSHIFT
+&kp LANGUAGE_1  &kp LANGUAGE_2  &trans  &trans  &trans   &kp LS(HOME)  &kp LS(END)  &kp BACKSPACE  &trans    &trans    &trans     &kp LS(LC(DEL))  &trans     &kp DEL
             >;
         };
 
@@ -255,7 +255,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &tog 1
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
             >;
