@@ -21,16 +21,6 @@
             key-positions = <53 54>;
         };
 
-        kpKayotin {
-            bindings = <&kp2>;
-            key-positions = <33 34>;
-        };
-
-        kpHakumai {
-            bindings = <&kp1>;
-            key-positions = <47 48>;
-        };
-
         kpUnderScore {
             bindings = <&kp INT1>;
             key-positions = <38 51>;
@@ -66,6 +56,26 @@
             key-positions = <47 49>;
         };
 
+        kk2l {
+            bindings = <&kp LS(RBKT)>;
+            key-positions = <33 34>;
+        };
+
+        kk2r {
+            bindings = <&kp LS(BACKSLASH)>;
+            key-positions = <47 48>;
+        };
+
+        kk3l {
+            bindings = <&kp RBKT>;
+            key-positions = <35 34>;
+        };
+
+        kk3r {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <49 48>;
+        };
+
         sq {
             bindings = <&kp LS(N7)>;
             key-positions = <19 33>;
@@ -74,6 +84,26 @@
         dq {
             bindings = <&kp LS(N2)>;
             key-positions = <34 20>;
+        };
+
+        F13 {
+            bindings = <&kp F13>;
+            key-positions = <19 20>;
+        };
+
+        F14 {
+            bindings = <&kp F14>;
+            key-positions = <19 21>;
+        };
+
+        F15 {
+            bindings = <&kp F15>;
+            key-positions = <20 21>;
+        };
+
+        F16 {
+            bindings = <&kp F16>;
+            key-positions = <19 20 21>;
         };
     };
 
