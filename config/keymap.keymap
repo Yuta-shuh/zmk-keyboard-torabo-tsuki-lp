@@ -40,6 +40,41 @@
             bindings = <&tog 1>;
             key-positions = <34 35>;
         };
+
+        AltF4 {
+            bindings = <&kp LA(F4)>;
+            key-positions = <17 16>;
+        };
+
+        CmdW {
+            bindings = <&kp LG(W)>;
+            key-positions = <28 27 26>;
+        };
+
+        CmdQ {
+            bindings = <&kp LG(Q)>;
+            key-positions = <12 13>;
+        };
+
+        kk1l {
+            bindings = <&kp LS(N8)>;
+            key-positions = <33 35>;
+        };
+
+        kk1r {
+            bindings = <&kp LS(N9)>;
+            key-positions = <47 49>;
+        };
+
+        sq {
+            bindings = <&kp LS(N7)>;
+            key-positions = <19 33>;
+        };
+
+        dq {
+            bindings = <&kp LS(N2)>;
+            key-positions = <34 20>;
+        };
     };
 
     behaviors {
@@ -188,11 +223,11 @@
 
         layer_8 {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans    &trans     &trans     &trans    &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans                  &trans    &trans     &trans     &trans    &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans    &mkp LCLK  &trans     &trans    &trans  &tog 1
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans  &trans  &trans  &trans    &trans     &trans     &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &trans  &trans  &tog 1
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans
             >;
         };
     };
