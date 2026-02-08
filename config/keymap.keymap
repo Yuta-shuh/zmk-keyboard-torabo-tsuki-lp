@@ -86,22 +86,22 @@
             key-positions = <34 20>;
         };
 
-        F13 {
+        kpF13 {
             bindings = <&kp F13>;
             key-positions = <19 20>;
         };
 
-        F14 {
+        kpF14 {
             bindings = <&kp F14>;
             key-positions = <19 21>;
         };
 
-        F15 {
+        kpF15 {
             bindings = <&kp F15>;
             key-positions = <20 21>;
         };
 
-        F16 {
+        kpF16 {
             bindings = <&kp F16>;
             key-positions = <19 20 21>;
         };
