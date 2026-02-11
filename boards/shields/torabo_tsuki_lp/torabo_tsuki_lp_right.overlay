@@ -4,11 +4,13 @@
 #include <input/processors/runtime-input-processor.dtsi>
 
 &trackball_listener {
-    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &mouse_runtime_input_processor>;
-    scroller {
-        layers = <3>;
-        input-processors = <&zip_xy_to_scroll_mapper &scroll_runtime_input_processor>;
-    };
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &mouse_runtime_input_processor &scroll_runtime_input_processor>;
+};
+
+&scroll_runtime_input_processor {
+        x-codes = <INPUT_REL_X>;
+		y-codes = <INPUT_REL_Y>;
+		xy-to-scroll-enabled;
 };
 
 &size_s_transform {
