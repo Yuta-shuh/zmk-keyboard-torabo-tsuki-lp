@@ -18,7 +18,7 @@
 
         lock {
             bindings = <&kp LG(L)>;
-            key-positions = <53 54>;
+            key-positions = <38 39>;
         };
 
         kpUnderScore {
@@ -33,77 +33,77 @@
 
         AltF4 {
             bindings = <&kp LA(F4)>;
-            key-positions = <17 16>;
+            key-positions = <4 5>;
         };
 
         CmdW {
             bindings = <&kp LG(W)>;
-            key-positions = <28 27 26>;
+            key-positions = <4 16>;
         };
 
         CmdQ {
             bindings = <&kp LG(Q)>;
-            key-positions = <12 13>;
+            key-positions = <0 1>;
         };
 
         kk1l {
             bindings = <&kp LS(N8)>;
-            key-positions = <33 35>;
+            key-positions = <19 21>;
         };
 
         kk1r {
             bindings = <&kp LS(N9)>;
-            key-positions = <47 49>;
+            key-positions = <33 35>;
         };
 
         kk2l {
             bindings = <&kp LS(RBKT)>;
-            key-positions = <33 34>;
+            key-positions = <19 20>;
         };
 
         kk2r {
             bindings = <&kp LS(BACKSLASH)>;
-            key-positions = <47 48>;
+            key-positions = <33 34>;
         };
 
         kk3l {
             bindings = <&kp RBKT>;
-            key-positions = <35 34>;
+            key-positions = <20 21>;
         };
 
         kk3r {
             bindings = <&kp BACKSLASH>;
-            key-positions = <49 48>;
+            key-positions = <34 35>;
         };
 
         sq {
             bindings = <&kp LS(N7)>;
-            key-positions = <19 33>;
+            key-positions = <7 19>;
         };
 
         dq {
             bindings = <&kp LS(N2)>;
-            key-positions = <34 20>;
+            key-positions = <8 20>;
         };
 
         kpF13 {
             bindings = <&kp F13>;
-            key-positions = <19 20>;
+            key-positions = <7 8>;
         };
 
         kpF14 {
             bindings = <&kp F14>;
-            key-positions = <19 21>;
+            key-positions = <7 9>;
         };
 
         kpF15 {
             bindings = <&kp F15>;
-            key-positions = <20 21>;
+            key-positions = <8 9>;
         };
 
         kpF16 {
             bindings = <&kp F16>;
-            key-positions = <19 20 21>;
+            key-positions = <7 8 9>;
         };
     };
 
