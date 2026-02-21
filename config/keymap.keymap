@@ -203,11 +203,11 @@
 
         layer_3 {
             bindings = <
-&trans        &trans        &trans        &trans        &trans        &trans                          &trans            &trans     &trans         &trans     &trans      &trans
-&trans        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
-&trans        &kp F6        &kp F7        &kp F8        &kp F9        &kp F10     &trans      &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
-&bt BT_SEL 4  &kp F11       &kp F12       &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &bt BT_CLR  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp DELETE    &kp TAB     &trans      &trans  &trans            &trans     &trans         &trans     &trans      &trans
+&trans          &trans        &trans        &trans        &trans        &trans                          &trans            &trans     &trans         &trans     &trans      &trans
+&studio_unlock  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                          &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
+&out OUT_TOG    &kp F6        &kp F7        &kp F8        &kp F9        &kp F10     &trans      &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
+&bt BT_SEL 4    &kp F11       &kp F12       &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &bt BT_CLR  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp DELETE    &kp TAB     &trans      &trans  &trans            &trans     &trans         &trans     &trans      &trans
             >;
         };
 
