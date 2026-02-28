@@ -166,14 +166,14 @@
         en: en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG2 &to 7>;
+            bindings = <&kp LANG2 &tog 7>;
             label = "EN";
         };
 
         ja: ja {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG1 &to 0>;
+            bindings = <&kp LANG1 &tog 7>;
             label = "JA";
         };
     };
