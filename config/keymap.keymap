@@ -201,13 +201,13 @@
             >;
         };
 
-        layer_2 {
+        layer_2 { // Windows
             bindings = <
-&trans  &trans      &trans      &trans      &trans      &trans                      &trans          &trans         &trans            &trans             &trans         &trans
-&trans  &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)      &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &trans
-&trans  &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &trans  &trans  &kp LEFT_BRACE  &kp MINUS      &kp EQUAL         &kp RIGHT_BRACE    &kp COLON      &trans
-&trans  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &trans  &trans  &kp LS(MINUS)   &kp LS(EQUAL)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans
-&trans  &trans      &trans      &trans      &trans      &trans      &trans  &trans  &kp TAB         &kp DEL        &trans            &trans             &trans         &trans
+&trans  &trans      &trans      &trans      &trans      &trans                      &trans      &trans      &trans      &trans      &trans      &trans
+&trans  &trans      &trans      &trans      &trans      &trans                      &trans      &trans      &trans      &trans      &trans      &trans
+&trans  &trans      &trans      &trans      &trans      &trans      &trans  &trans  &trans      &trans      &trans      &trans      &trans      &trans
+&trans  &trans      &trans      &trans      &trans      &trans      &trans  &trans  &trans      &trans      &trans      &trans      &trans      &trans
+&trans  &trans      &trans      &trans      &trans      &trans      &trans  &trans  &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };
 
@@ -215,7 +215,7 @@
             bindings = <
 &trans          &trans        &trans        &trans        &trans        &trans                          &trans            &trans     &trans         &trans     &trans      &trans
 &studio_unlock  &to 0         &to 2         &kp LC(E)     &tog 7        &tog 4                          &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
-&out OUT_TOG    &kp LC(A)     &kp LG(S)        &kp F8        &kp F9        &kp F10     &trans      &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
+&out OUT_TOG    &kp LC(A)     &kp LG(S)     &kp F8        &kp F9        &kp F10     &trans      &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
 &bt BT_SEL 4    &kp F11       &kp F12       &kp LG(C)     &kp LG(V)     &bt BT_NXT  &bt BT_CLR  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
 &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp DELETE    &kp TAB     &trans      &trans  &trans            &trans     &trans         &trans     &trans      &bt BT_CLR_ALL
             >;
