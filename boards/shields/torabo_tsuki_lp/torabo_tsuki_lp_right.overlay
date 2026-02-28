@@ -7,7 +7,7 @@
     require-prior-idle-ms = <300>;
 };
 
-&trackball_listener {
+&pointing_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &mouse_runtime_input_processor &scroll_runtime_input_processor>;
 
     scroller {
