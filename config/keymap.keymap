@@ -222,11 +222,11 @@
 
         layer_3 {
             bindings = <
-&trans          &trans        &trans        &trans        &trans      &trans                          &trans            &trans           &trans         &trans           &trans        &trans
-&studio_unlock  &to 0         &to 2         &kp LC(E)     &tog 7      &tog 4                          &kp HOME          &kp PG_UP        &kp PAGE_DOWN  &kp END          &kp ESCAPE    &trans
-&out OUT_TOG    &kp LC(A)     &kp LG(S)     &kp F8        &kp F9      &kp F10     &trans      &trans  &kp LEFT          &kp DOWN         &kp UP_ARROW   &kp RIGHT        &kp TAB       &trans
-&bt BT_SEL 4    &kp F11       &kp F12       &kp LG(C)     &kp LG(V)   &bt BT_NXT  &bt BT_CLR  &trans  &kp SINGLE_QUOTE  &kp LS(LC(TAB))  &kp GRAVE      &kp &kp LC(TAB)  &kp PIPE      &trans
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp DELETE  &kp TAB     &trans      &trans  &trans            &trans           &trans         &bt BT_NXT       &out OUT_TOG  &bt BT_CLR_ALL
+&trans          &trans        &trans        &trans        &trans      &trans                          &trans            &trans           &trans         &trans       &trans        &trans
+&studio_unlock  &to 0         &to 2         &kp LC(E)     &tog 7      &tog 4                          &kp HOME          &kp PG_UP        &kp PAGE_DOWN  &kp END      &kp ESCAPE    &trans
+&out OUT_TOG    &kp LC(A)     &kp LG(S)     &kp F8        &kp F9      &kp F10     &trans      &trans  &kp LEFT          &kp DOWN         &kp UP_ARROW   &kp RIGHT    &kp TAB       &trans
+&bt BT_SEL 4    &kp F11       &kp F12       &kp LG(C)     &kp LG(V)   &bt BT_NXT  &bt BT_CLR  &trans  &kp SINGLE_QUOTE  &kp LS(LC(TAB))  &kp GRAVE      &kp LC(TAB)  &kp PIPE      &trans
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp DELETE  &kp TAB     &trans      &trans  &trans            &trans           &trans         &bt BT_NXT   &out OUT_TOG  &bt BT_CLR_ALL
             >;
         };
 
