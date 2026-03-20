@@ -108,6 +108,25 @@
     };
 
     behaviors {
+        lt: lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_OVERRIDE";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;   // ホールド判定時間
+            quick-tap-ms = <175>;      // ★ここを追加！(タップ後175ms以内の再打鍵をリピートに)
+            flavor = "balanced";       // レイヤータップには balanced が相性良いです
+            bindings = <&mo>, <&kp>;   // 左側がレイヤー(mo)、右側がキー(kp)
+        }
+
+        mt: mt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;   // ホールド判定時間
+            quick-tap-ms = <175>;      // ★ここがリピートの鍵
+            flavor = "tap-preferred";  // タップ側を優先する設定
+            bindings = <&kp>, <&kp>;
+        };
+
         tap_dance_mouse: tap_dance_mouse {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MOUSE";
