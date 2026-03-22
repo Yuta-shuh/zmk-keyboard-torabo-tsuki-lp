@@ -160,14 +160,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_D";
             #binding-cells = <0>;
-            bindings = <&mt D LGUI>, <&en>;
+            bindings = <&mt LGUI D>, <&en>;
         };
 
         td_k: td_k {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_K";
             #binding-cells = <0>;
-            bindings = <&mt K LGUI>, <&ja>;
+            bindings = <&mt RGUI K>, <&ja>;
         };
     };
 
@@ -224,7 +224,7 @@
             >;
         };
 
-        layer_2 {
+        Win {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
@@ -234,7 +234,7 @@
             >;
         };
 
-        layer_3 {
+        Orange {
             bindings = <
 &trans          &trans        &trans        &trans        &trans      &trans                          &trans            &trans           &trans         &trans       &trans        &trans
 &studio_unlock  &to 0         &to 2         &kp LC(E)     &tog 7      &tog 4                          &kp HOME          &kp PG_UP        &kp PAGE_DOWN  &kp END      &kp ESCAPE    &trans
