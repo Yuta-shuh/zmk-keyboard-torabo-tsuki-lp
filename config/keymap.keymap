@@ -112,6 +112,16 @@
             bindings = <&kp F16>;
             key-positions = <7 8 9>;
         };
+
+        cJa {
+            bindings = <&ja>;
+            key-positions = <19 46>;
+        };
+
+        cEn {
+            bindings = <&en>;
+            key-positions = <16 43>;
+        };
     };
 
     behaviors {
@@ -201,23 +211,27 @@
         };
 
         // Macへ（BT接続に切り替え + Macレイヤーへ）
+
         to_mac: to_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_BLE>, <&bt BT_SEL 0>, <&to 0>;
+            bindings = <&out OUT_BLE &bt BT_SEL 0 &to 0>;
         };
-        
+
         // Windowsへ（USB接続に切り替え + Winレイヤーへ）
+
         to_win: to_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&out OUT_USB>, <&to 2>;
+            bindings = <&out OUT_USB &to 2>;
         };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         // Winモード(L2) かつ スクロール操作(L4) なら、Win用スクロール設定(L9)を起動
+
         tri_layer {
             if-layers = <2 4>;
             then-layer = <9>;
@@ -319,11 +333,11 @@
 
         YelloWin {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans      &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans      &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans      &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans      &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans      &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
