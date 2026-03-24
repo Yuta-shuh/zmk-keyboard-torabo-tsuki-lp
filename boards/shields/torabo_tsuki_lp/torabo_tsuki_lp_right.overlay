@@ -19,6 +19,17 @@
         >;
     };
 
+    // Win用スクロール
+    scroller_win {
+        layers = <9>;
+        input-processors = <
+            &zip_xy_to_scroll_mapper
+            &zip_scroll_transform
+            &zip_scroll_scaler 1 16
+        >;
+    };
+
+
     // 2. レイヤー0と7の時だけ、オートマウスを「追加」する
     l0_7_active {
         layers = <0 7>;
